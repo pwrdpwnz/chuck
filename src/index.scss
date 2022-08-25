@@ -1,13 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 30px;
+  border: 2px solid black;
+}
+
+// var
+
+$red: #E12231;
+
+
+//Header
+.header {
+  position: relative;
+  .btn-primary {
+    background: $red;
+    box-shadow: 0 7px 19px rgba(225, 34, 49, 0.35);
+    border-radius: 225px;
+    border: none;
+    padding: 16px 43px;
+
+    &:hover {
+      background: rgba($red, 0.7);
+    }
+  }
+
+  .me-auto {
+    align-items: center!important;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .mr {
+    margin-right: 15px;
+  }
+  .rel-2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  &_title {
+    position: relative;
+    font-family: 'Neucha', cursive;
+    font-weight: 400;
+    font-size: 76px;
+    max-width: 373px;
+    margin-left: -30px;
+  }
+
+  .palm {
+    position: absolute;
+    top: -13px;
+    right: 0;
+    transform: rotate(15.85deg);
+  }
+
+  .span {
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .iconEco {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .rel-2 {
+    max-width: 100%;
+  }
+  .header_title {
+    font-size: 3rem;
+  }
+
+}
+
+
+@media (max-width: 950px) {
+  .mr100 {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mr100 {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
